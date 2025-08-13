@@ -1,26 +1,18 @@
 
 :root{
-  --green:#2F6F3E; /* forest */
-  --leaf:#8EBF63;  /* leaf */
-  --wheat:#D7A86E; /* wheat */
-  --ink:#111111;
-  --cream:#FAF7F1;
-  --maxw:1100px;
-  --rad:16px;
-  --shadow:0 6px 18px rgba(0,0,0,.06);
+  --green:#2F6F3E; --leaf:#8EBF63; --wheat:#D7A86E; --soil:#5A4632; --cream:#FAF7F1; --ink:#111111;
+  --maxw:1100px; --rad:16px; --shadow:0 6px 18px rgba(0,0,0,.06);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--cream)}
-a{color:var(--green);text-decoration:none}
-a:hover{text-decoration:underline}
+a{color:var(--green);text-decoration:none} a:hover{text-decoration:underline}
 .container{max-width:var(--maxw);margin:0 auto;padding:clamp(16px,3vw,32px)}
 .header{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:12px}
-.brand img{height:48px;width:auto}
+.brand img{height:56px;width:auto}
 .nav{display:flex;gap:14px;flex-wrap:wrap}
 .nav a{padding:8px 12px;border-radius:12px}
 .nav a.active, .nav a:hover{background:#E8F5E9}
-.lang-toggle button{border:1px solid #cfd8dc;background:white;padding:6px 10px;border-radius:10px;cursor:pointer}
 .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;padding:28px 0}
 .hero h1{font-size:clamp(28px,5vw,44px);line-height:1.05;margin:0 0 8px;color:var(--green)}
 .hero p{margin:0 0 16px;font-size:clamp(16px,2.4vw,18px)}
@@ -34,4 +26,12 @@ a:hover{text-decoration:underline}
 .notice{background:#FFF7E6;border:1px solid #FFE0B2;padding:12px;border-radius:12px}
 .footer{padding:24px 0;border-top:1px solid #eee;color:#555;font-size:14px}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.small{font-size:12px;color:#666}
+.price{font-weight:700}
+.product .add{background:var(--leaf);color:#083507;border:none;padding:10px;border-radius:10px;cursor:pointer}
+.cart{background:white;border:1px solid #eee;border-radius:var(--rad);padding:16px;box-shadow:var(--shadow)}
+.cart-line{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:8px 0}
+.cart-line input{width:64px;text-align:center}
+.cart-total{display:flex;align-items:center;justify-content:space-between;font-weight:800;border-top:1px dashed #ddd;padding-top:8px;margin-top:12px}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 @media (max-width:900px){ .hero{grid-template-columns:1fr} }

@@ -1,0 +1,58 @@
+<!doctype html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panier — La Ferme Pi</title>
+<link rel="stylesheet" href="styles.css"></head><body>
+
+  <header class="header container" role="banner">
+    <div class="brand">
+      <picture><source srcset="assets/logo-ferme-pi.webp" type="image/webp">
+        <img src="assets/logo-ferme-pi.png" alt="Logo Ferme Pi"></picture>
+      <strong>La Ferme Pi</strong>
+    </div>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" >Accueil</a>
+      <a href="produits.html" >Produits</a>
+      <a href="boutique.html" >Boutique</a>
+      <a href="apropos.html" >À propos</a>
+      <a href="panier.html" class="active">Panier</a> <span id="cart-badge" class="small"></span>
+    </nav>
+  </header>
+
+<main>
+<section class="section container">
+  <h2>Votre panier</h2>
+  <div class="cart" id="cart-box">
+    <div id="cart-lines"></div>
+    <div class="cart-total"><span>Sous-total</span> <span id="cart-total">$0.00</span></div>
+    <p class="small">Taxes incluses si applicables.</p>
+  </div>
+</section>
+
+<section class="section container" id="paiement">
+  <h3>Paiement par Virement Interac</h3>
+  <ol>
+    <li>Envoyez un Virement Interac du montant total à <strong id="interac-mail" class="mono">paiements@lafermepi.ca</strong></li>
+    <li>Collez votre numéro de commande : <code class="mono" id="order-id"></code> <button id="copy-id" class="button button--ghost">Copier</button></li>
+    <li>Nous confirmerons par courriel et préparerons votre commande.</li>
+  </ol>
+  <div class="grid-2">
+    <label><span>Choix de cueillette/livraison</span>
+      <select id="ck-pickup">
+        <option value="ferme">Cueillette à la ferme (samedi 9h–14h)</option>
+        <option value="marche">Point de cueillette au marché</option>
+        <option value="livraison">Livraison locale (secteur, +$5)</option>
+      </select>
+    </label>
+    <label><span>Nom complet</span><input id="ck-name" type="text" required></label>
+    <label><span>Courriel</span><input id="ck-email" type="email" required></label>
+    <label><span>Note (ex. allergies)</span><input id="ck-note" type="text"></label>
+  </div>
+  <p><button id="place-order" class="button">Générer numéro de commande</button>
+     <a id="email-order" class="button button--ghost" target="_blank" rel="noopener">Envoyer ma commande par courriel</a></p>
+  <h4>Résumé</h4>
+  <pre id="order-summary" class="mono" style="white-space:pre-wrap"></pre>
+</section>
+</main>
+<footer class="footer container" role="contentinfo"><div>© La Ferme Pi. Tous droits réservés.</div></footer>
+<script src="config.js"></script><script src="shop.js"></script>
+</body></html>
