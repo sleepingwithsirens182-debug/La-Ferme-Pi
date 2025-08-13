@@ -3,20 +3,66 @@
 <title>À propos — La Ferme Pi</title>
 <link rel="stylesheet" href="styles.css"></head><body>
 
-  <header class="header container" role="banner">
-    <div class="brand">
+  
+  
+  <header class="header container" role="banner" style="flex-direction:column;align-items:center;gap:10px;text-align:center">
+    <div class="brand" style="flex-direction:column;align-items:center;gap:6px">
       <picture><source srcset="assets/logo-ferme-pi.webp" type="image/webp">
-        <img src="assets/logo-ferme-pi.png" alt="Logo Ferme Pi"></picture>
-      <strong>La Ferme Pi</strong>
+        <img src="assets/logo-ferme-pi.png" alt="Logo Ferme Pi" style="height:120px;width:auto"></picture>
+      <strong style="font-size:1.5rem">La Ferme Pi</strong>
+      <a href="mailto:lafermepi@gmail.com" style="color:var(--green);font-weight:600;text-decoration:none">lafermepi@gmail.com</a>
     </div>
-    <nav class="nav" aria-label="Navigation principale">
-      <a href="index.html" >Accueil</a>
-      <a href="produits.html" >Produits</a>
-      <a href="boutique.html" >Boutique</a>
-      <a href="apropos.html" class="active">À propos</a>
-      <a href="panier.html" >Panier</a> <span id="cart-badge" class="small"></span>
-    </nav>
+    <div class="menu-wrap">
+      <button class="menu-btn" id="menu-btn" aria-haspopup="true" aria-expanded="false" aria-controls="menu-list">
+        Menu — À propos
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="dropdown" id="menu-list" role="menu" aria-label="Menu principal">
+        <a role="menuitem" href="index.html">Accueil</a>
+        <a role="menuitem" href="produits.html">Produits</a>
+        <a role="menuitem" href="boutique.html">Boutique</a>
+        <a role="menuitem" href="apropos.html">À propos</a>
+        <a role="menuitem" href="panier.html">Panier</a>
+      </div>
+    </div>
+    <div class="backdrop" id="menu-backdrop" aria-hidden="true"></div>
   </header>
+  <script>
+    (function(){
+      const btn = document.getElementById('menu-btn');
+      const list = document.getElementById('menu-list');
+      const bd = document.getElementById('menu-backdrop');
+      function close(){
+        list.classList.remove('open'); bd.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+      }
+      btn?.addEventListener('click',()=>{
+        const open = list.classList.toggle('open');
+        bd.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true':'false');
+      });
+      bd?.addEventListener('click', close);
+      document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') close(); });
+    })();
+  </script>
+    
+  <script>
+    (function(){
+      const btn = document.getElementById('menu-btn');
+      const list = document.getElementById('menu-list');
+      const bd = document.getElementById('menu-backdrop');
+      function close(){
+        list.classList.remove('open'); bd.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+      }
+      btn?.addEventListener('click',()=>{
+        const open = list.classList.toggle('open');
+        bd.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true':'false');
+      });
+      bd?.addEventListener('click', close);
+      document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') close(); });
+    })();
+  </script>
+    
 
 <main>
 <section class="section container grid-2">

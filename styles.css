@@ -35,3 +35,35 @@ a{color:var(--green);text-decoration:none} a:hover{text-decoration:underline}
 .cart-total{display:flex;align-items:center;justify-content:space-between;font-weight:800;border-top:1px dashed #ddd;padding-top:8px;margin-top:12px}
 .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 @media (max-width:900px){ .hero{grid-template-columns:1fr} }
+
+
+/* Dropdown menu */
+.menu-wrap{position:relative}
+.menu-btn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;padding:10px 14px;border:none;border-radius:12px;cursor:pointer;font-weight:700;box-shadow:var(--shadow)}
+.menu-btn:hover{opacity:.95}
+.dropdown{position:absolute;right:0;top:calc(100% + 8px);background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:var(--shadow);min-width:220px;display:none;z-index:20;padding:6px}
+.dropdown.open{display:block}
+.dropdown a{display:block;padding:10px 12px;border-radius:10px;color:var(--ink)}
+.dropdown a:hover{background:#F1F8E9}
+.backdrop{position:fixed;inset:0;display:none}
+.backdrop.open{display:block}
+@media (max-width:700px){
+  .menu-btn{width:100%}
+  .dropdown{left:0;right:auto;min-width:unset;width:100%}
+}
+
+
+/* Background logo on homepage */
+body.homepage{
+  background-image: url('assets/logo-ferme-pi.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body.homepage::before{
+  content:'';
+  position:fixed; inset:0;
+  background: rgba(255,255,255,0.85); /* readability veil */
+  z-index:-1;
+}
