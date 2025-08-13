@@ -1,0 +1,4 @@
+Team: La Ferme Pi
+Thanks: Our customers & community
+Technology: Vanilla HTML/CSS/JS with Interac-only checkout
+Contact: contact@lafermepi.example
