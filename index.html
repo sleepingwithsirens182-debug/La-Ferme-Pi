@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La Ferme Pi — Frais, local, durable</title>
-  <meta name="description" content="La Ferme Pi — ferme maraîchère au Québec: paniers de saison (CSA), œufs, miel, visites de ferme.">
+  <meta name="description" content="La Ferme Pi — ferme maraîchère: produits frais et transformations aux piments forts.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,14 +15,10 @@
       <img src="assets/logo.svg" alt="Logo La Ferme Pi">
       <strong>La Ferme Pi</strong>
     </div>
-    <nav class="nav" aria-label="Primary">
+    <nav class="nav" aria-label="Navigation principale">
       <a href="#home" class="active" data-i18n="nav_home">Accueil</a>
-      <a href="#boutique" data-i18n="nav_shop">Boutique</a>
       <a href="#produits" data-i18n="nav_products">Produits</a>
-      <a href="#csa" data-i18n="nav_csa">Paniers (CSA)</a>
-      <a href="#visites" data-i18n="nav_visit">Visites</a>
       <a href="#apropos" data-i18n="nav_about">À propos</a>
-      <a href="#nouvelles" data-i18n="nav_blog">Nouvelles</a>
       <a href="#contact" data-i18n="nav_contact">Contact</a>
     </nav>
     <div class="lang-toggle">
@@ -34,88 +30,48 @@
   <main>
     <section class="hero container" id="home">
       <div>
-        <span class="badge">Agriculture responsable</span>
         <h1 data-i18n="hero_title">La Ferme Pi — Frais, local, durable.</h1>
-        <p data-i18n="hero_sub">Maraîchage diversifié, paniers de saison, œufs frais et visites agrotouristiques à deux pas de chez vous.</p>
+        <p data-i18n="hero_sub">Maraîchage diversifié et transformations gourmandes, tout près de chez vous.</p>
         <div class="cta">
-          <a href="#boutique" class="button">Voir la boutique</a>
-          <a href="#csa" class="button button--ghost" data-i18n="hero_cta_secondary">S’abonner aux paniers</a>
+          <a href="#produits" class="button" data-i18n="hero_cta_primary">Voir nos produits</a>
         </div>
       </div>
       <div>
-        <div class="notice">Image héro à remplacer par votre photo (1200×800+).</div>
-      </div>
-    </section>
-
-    <section class="section container" id="boutique">
-      <h2 data-i18n="shop_title">Boutique en ligne</h2>
-      <p class="small" data-i18n="shop_sub">Ajoutez vos produits au panier. Paiement uniquement par Virement Interac.</p>
-      <div class="shop-grid">
-        <div>
-          <div id="shop-products" class="cards"></div>
-        </div>
-        <aside class="cart" id="cart-box" aria-live="polite">
-          <h3 data-i18n="cart_title">Votre panier</h3>
-          <div id="cart-lines"></div>
-          <div class="cart-total"><span data-i18n="subtotal">Sous-total</span> <span id="cart-total">$0.00</span></div>
-          <p class="small" data-i18n="taxes_note">Taxes incluses si applicables.</p>
-          <button id="checkout" class="button" data-i18n="checkout" disabled>Passer la commande</button>
-          <hr class="soft">
-          <div class="small">Paiement accepté: <strong>Interac e‑Transfer</strong> (Autodépôt recommandé).</div>
-        </aside>
+        <div class="notice">Remplacez par une photo de la ferme (1200×800+).</div>
       </div>
     </section>
 
     <section class="section container" id="produits">
-      <h2 data-i18n="products_title">Nos produits vedettes</h2>
+      <h2 data-i18n="products_title">Produits vedettes</h2>
+      
       <div class="cards">
         <article class="card">
-          <h3>Tomates anciennes</h3>
-          <p>Variétés colorées, goût intense. Vendues au kilo.</p>
+          <h3>Sauces fortes</h3>
+          <p>Préparées avec nos piments cultivés sur place, relevées et savoureuses.</p>
         </article>
         <article class="card">
-          <h3>Oeufs de poules en liberté</h3>
-          <p>Boîte de 12 — pondus du jour, coquilles brunes.</p>
+          <h3>Confitures de piments</h3>
+          <p>Douceur et piquant en harmonie, idéales pour accompagner fromages et viandes.</p>
         </article>
         <article class="card">
-          <h3>Miel de fleurs sauvages</h3>
-          <p>500 g, non pasteurisé, récolté à la ferme.</p>
+          <h3>Confiture rhubarbe et piments</h3>
+          <p>Mélange unique de rhubarbe acidulée et de chaleur des piments.</p>
+        </article>
+        <article class="card">
+          <h3>Sirop de menthe caliente</h3>
+          <p>Rafraîchissant et épicé, parfait pour cocktails et desserts.</p>
         </article>
       </div>
-    </section>
 
-    <section class="section container" id="csa">
-      <h2 data-i18n="csa_title">Paniers de saison (CSA)</h2>
-      <p data-i18n="csa_text">Choisissez un panier hebdo ou bihebdo, points de cueillette: ferme, marché, livraison locale.</p>
-    </section>
-
-    <section class="section container" id="visites">
-      <h2 data-i18n="visit_title">Visitez la ferme</h2>
-      <p data-i18n="visit_text">Réservez une visite éducative, une auto-cueillette ou un événement privé.</p>
-      <p><span class="badge" data-i18n="visit_badge">Agrotourisme</span></p>
     </section>
 
     <section class="section container grid-2" id="apropos">
       <div>
         <h2 data-i18n="about_title">À propos de nous</h2>
-        <p data-i18n="about_text">La Ferme Pi cultive avec amour des fruits et légumes sans compromis sur le goût ni la planète.</p>
+        <p>De la terre à la table ! Nous cultivons une diversité de légumes maraîchers avec soin, et développons une gamme de transformations gourmandes — notre spécialité : les produits à base de piments forts. La ferme mise sur la culture en serre pour prolonger la saison et explorer des variétés plus délicates. Nous testons aussi des légumes exotiques adaptés à notre climat, afin d’offrir des saveurs surprenantes, toujours fraîches et locales.</p>
       </div>
       <div class="notice">
-        Remplacez ce bloc par une photo de l’équipe ou des champs.
-      </div>
-    </section>
-
-    <section class="section container" id="nouvelles">
-      <h2 data-i18n="blog_title">Nouvelles de la ferme</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Semis 2025</h3>
-          <p>Ça lève bien dans la serre! Premiers plants de tomates et concombres.</p>
-        </article>
-        <article class="card">
-          <h3>Ouverture du kiosque</h3>
-          <p>Le kiosque à la ferme ouvre les samedis 9h–14h dès le 17 mai.</p>
-        </article>
+        Une image de l'équipe ou des cultures peut être placée ici.
       </div>
     </section>
 
@@ -123,7 +79,7 @@
       <h2 data-i18n="contact_title">Nous joindre</h2>
       <p class="notice" data-i18n="contact_note">Réponse sous 24–48 h.</p>
       <form id="contact-form" aria-label="Formulaire de contact">
-        <div class="row">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
           <label>
             <span data-i18n="form_name">Votre nom</span>
             <input type="text" required data-i18n-placeholder="form_name" placeholder="Votre nom">
@@ -146,59 +102,6 @@
     <div data-i18n="footer_rights">© La Ferme Pi. Tous droits réservés.</div>
   </footer>
 
-  <!-- Modal for Interac checkout -->
-  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="ck-title">
-    <div class="modal-box">
-      <h3 id="ck-title" data-i18n="checkout_title">Paiement par Virement Interac</h3>
-      <p data-i18n="instruction_intro">Merci! Pour confirmer votre commande, suivez ces étapes:</p>
-      <ol>
-        <li><span data-i18n="step1">1) Envoyez un Virement Interac du montant total à</span> <strong class="mono" id="interac-mail">paiements@lafermepi.ca</strong></li>
-        <li><span data-i18n="step2">2) Utilisez le message du virement pour coller votre numéro de commande:</span> <code class="mono" id="order-id"></code> <button id="copy-id" class="button button--ghost" data-i18n="copy">Copier</button></li>
-        <li><span data-i18n="step3">3) Nous confirmerons par courriel et préparerons votre commande.</span></li>
-      </ol>
-      <hr class="soft">
-      <h4 data-i18n="order_info">Résumé et numéro de commande</h4>
-      <pre id="order-summary" class="mono" style="white-space:pre-wrap"></pre>
-
-      <div class="grid-2" style="margin-top:12px">
-        <label>
-          <span data-i18n="pickup_label">Choix de cueillette/livraison</span>
-          <select id="ck-pickup">
-            <option value="ferme">Cueillette à la ferme (samedi 9h–14h)</option>
-            <option value="marche">Point de cueillette au marché</option>
-            <option value="livraison">Livraison locale (selon secteur, +$5)</option>
-          </select>
-        </label>
-        <label>
-          <span data-i18n="name_label">Nom complet</span>
-          <input id="ck-name" type="text" required>
-        </label>
-        <label>
-          <span data-i18n="email_label">Courriel</span>
-          <input id="ck-email" type="email" required>
-        </label>
-        <label>
-          <span data-i18n="note_label">Note (ex. allergies)</span>
-          <input id="ck-note" type="text">
-        </label>
-      </div>
-
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
-        <button id="place-order" class="button" data-i18n="place_order">Générer numéro de commande</button>
-        <a id="email-order" class="button button--ghost" target="_blank" rel="noopener" data-i18n="email_order">Envoyer ma commande par courriel</a>
-        <button id="close-modal" class="button button--ghost" data-i18n="close">Fermer</button>
-      </div>
-      <p class="small">Astuce: activez l’<strong>Autodépôt Interac</strong> sur l’adresse afin d’éviter les questions de sécurité.</p>
-    </div>
-  </div>
-
-  <script src="config.js"></script>
   <script src="script.js"></script>
-  <script>
-    // Reflect configured Interac email in modal text
-    document.addEventListener('DOMContentLoaded', ()=>{
-      document.getElementById('interac-mail').textContent = (window.FERME_PI_CONFIG||{}).SHOP?.interacEmail || 'paiements@lafermepi.ca';
-    });
-  </script>
 </body>
 </html>
